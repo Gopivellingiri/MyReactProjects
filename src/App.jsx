@@ -57,8 +57,9 @@ const App = () => {
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
-  const [query, setQuery] = useState("");
-  const tempQuery = 'interstellar'
+  const [query, setQuery] = useState("inception");
+  const [selectedId, setSelectedId] = useState(null)
+
 
 
 
