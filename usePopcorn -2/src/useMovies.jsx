@@ -1,10 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+
+  const KEY = '7dc0446c'
 const useMovies = (query) => {
     const [movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState('')
+
     useEffect(function() {
+        // callback?.()
         const controller = new AbortController()
         async function fetchMovies() {
          try {setIsLoading(true)
@@ -35,12 +39,14 @@ const useMovies = (query) => {
           setError('')
           return;
         }
-        handleCloseMovie();
+        // handleCloseMovie();
         fetchMovies()
         return function() {
           controller.abort()
         }
       }, [query])
+
+      return {movies, isLoading, error}
 }
 
 export default useMovies
