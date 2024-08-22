@@ -1,0 +1,4 @@
+[build]
+  base = "WorldWise"        # Base directory if needed; adjust if necessary
+  publish = "WorldWise/dist" # Path to the build output directory
+  command = "npm run build"  # Command to build the project
